@@ -14,25 +14,28 @@ generateBtn.addEventListener("click", writePassword);
 
 function writePassword(){
 while(true){
-  var length=window.prompt("Ingrese un numero entre 8 y 128");
+  var length=window.prompt("How long do you want your password? Input a number between 8 and 128");
     if(length>=8&&length<=128){
-      console.log("numero valido");
+      console.log("valid number");
       break;
+    }
+    else{
+      window.alert("ERROR: Input a number between 8 and 128");
     }
   };
 
 while(true){
-  numCond=window.confirm("Desea que su password contenga números?");
-  lowCond=window.confirm("Desea que su password contenga letras minúsculas?");
-  capCond=window.confirm("Desea que su password contenga letras mayúsculas?");
-  charCond=window.confirm("Desea que su password contenga caracteres especiales?")
+  numCond=window.confirm("Do you want your password to contain numbers?");
+  lowCond=window.confirm("Do you want your password to contain lowercase letters?");
+  capCond=window.confirm("Do you want your password to contain capital letters?");
+  charCond=window.confirm("Do you want your password to contain special characters?")
 
     //Numeros no, low no, cap no, random no
     if(numCond===true||lowCond===true||capCond===true||charCond===true){
       break;
     }
     else{
-      window.alert("ERROR: Seleccione al menos un criterio");
+      window.alert("ERROR: Select at least one criteria");
     }
   };
 
